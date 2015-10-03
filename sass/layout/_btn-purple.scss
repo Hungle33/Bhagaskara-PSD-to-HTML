@@ -1,0 +1,24 @@
+@mixin btn-purple($fontSize, $shadowSize) {
+	@include inline-block();
+	color:$f;
+	background-color:$purple;
+	padding:1.05em 3em;
+	font-size:$fontSize;
+	text-align:center;
+	@include box-shadow(0, $shadowSize, 0px, 0px, #6b2e68);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition:all 0.2s ease;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #d473bc;
+		text-decoration: none;
+		color: $f;
+	}
+}

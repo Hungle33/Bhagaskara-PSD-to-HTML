@@ -1,0 +1,45 @@
+.service-wrapper {
+	background: url("../images/service-bg.jpg") no-repeat center center;
+	background-attachment: fixed;
+	@include background-cover();
+	position:relative;
+}
+.service-info {
+	padding: 150px 0;
+	h1 {
+		margin-top:60px;
+		font-size:3em;
+		line-height: 1.2em;
+		color:$f;
+	}
+	.hexagon {
+		text-align: center;
+		position:relative;
+		#Layer_1 {
+			width:100%;
+			max-width:170px;
+		}
+		.st0 {
+			fill: rgba(255,255,255,0.2);
+			stroke-width:5px;
+			stroke: $f;
+		}
+		i {
+			display:block;
+			position:absolute;
+			font-size:5em;
+			top:50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			width:100%;
+		}
+	}
+}
+@media (min-width:320px) and (max-width:767px) {
+	.service-info {
+		padding: 80px 0;
+	}
+}
+

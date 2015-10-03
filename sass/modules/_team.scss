@@ -1,0 +1,156 @@
+.team-section {
+	padding-top: 150px;
+	padding-bottom: 117px;
+}
+/* Slider Styles */
+.cs-slider-viewport {
+	width:100%;
+	overflow:hidden;
+}
+.cs-slider {
+	width:200%;
+	margin-top:160px;
+}
+.cs-slider img {
+	width:70%;
+	height:auto;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+}
+.cs-slide {
+	text-align:center;
+	position:relative;
+	width:16.66%;
+	@include inline-block();
+	h1 {
+		font-size:1.5em;
+		margin-top:70px;
+		color:#484848;
+		text-transform: uppercase;
+	}
+	p {
+		font-size:1.125em;
+		margin-top:8px;
+		color: #777777;
+		text-transform: uppercase;
+	}
+}
+.arrow {
+	width:50%;
+	@include inline-block();
+	position:relative;
+	cursor:pointer;
+	&:hover{
+		.st0 {
+			fill:$purple;
+		}
+		i {
+			color:$f;
+		}
+	}
+}
+#nav-arrow {
+	width:80%;
+	height:auto;
+}
+.nav-arrow {
+	margin-top:130px;
+	.st0 {
+		fill:$f;
+		stroke-width:5px;
+		stroke:$purple; 
+	}
+	.icon {
+		width:100%;
+		position:absolute;
+		transform:translateY(-50%);
+		-webkit-transform:translateY(-50%);
+		-moz-transform:translateY(-50%);
+		top:49%;
+		text-align:center;
+		font-size:1.5em;
+		color:$purple;
+	}
+}
+.progress {
+	margin-top:1.4em;
+	@include roundedCorners(0);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.progress-bar {
+	background-color:$purple;
+}
+.progress-wrapper {
+	h3 {
+		text-transform:uppercase;
+		font-weight:bold;
+		color: #222222;
+		text-align:left;
+		font-size: 1.4em;
+		@include inline-block();
+	}
+	span {
+		color:#777777;
+		font-size:1.5em;
+		right:0;
+		position:absolute;
+	}
+}
+.progress-box {
+	margin-top: 200px;
+}
+.progress-box .progress-wrapper:nth-child(n+3) {
+	margin-top:27px;
+}
+.skills-section {
+	padding-bottom:180px;
+}
+@media (min-width:320px) and (max-width:767px) {
+	.skills-section .progress-box>.progress-wrapper {
+		padding:0 40px;
+		margin-top:0;
+	}
+	.skills-section {
+		padding-bottom:80px;
+	}
+	.progress-box {
+		margin-top:80px;
+	}
+	.progress-wrapper span {
+		right: 2em;
+	}
+	.cs-slider {
+		margin-top:50px;
+	}
+	.nav-arrow {
+		margin-top:50px;
+	}
+	.team-section {
+		padding-top:100px;
+	}
+	.cs-slide {
+		h1 {
+			font-size:1em;
+		}
+		p {
+			font-size:.9em;
+		}
+	}
+}
+@media (min-width:768px) and (max-width:991px) {
+	.team-section {
+		padding-top:120px;
+		.nav-arrow {
+			margin-top:40px;
+		}
+		.cs-slider {
+			margin-top:50px;
+		}
+	}
+	.progress-box {
+		margin-top:90px;
+	}
+}

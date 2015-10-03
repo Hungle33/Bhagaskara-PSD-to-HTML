@@ -1,0 +1,33 @@
+.sqr-title {
+	position:relative;
+	@include inline-block();
+	padding:.3em 1em;
+	line-height:2em;
+	font-size:3em;
+	// vertical alignment
+	color:$dark-gray;
+	span {
+		color: $purple;
+	}
+	&:after, &:before {
+		position:absolute;
+		width: .6em;
+		height: .6em;
+		content: "";
+	}
+	&:after {
+		@include box-shadow(2px, -2px, 2px, -1px, #e1a8c4);
+		right:0;
+		top:0;
+		border-right:1px solid #c186be;
+		border-top:1px solid #c186be;
+
+	}
+	&:before {
+		@include box-shadow(-2px, 2px, 2px, -1px, #e1a8c4);
+		bottom:0;
+		left:0;
+		border-bottom:1px solid #c186be;
+		border-left:1px solid #c186be;
+	}
+}

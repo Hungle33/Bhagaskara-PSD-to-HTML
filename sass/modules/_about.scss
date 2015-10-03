@@ -1,0 +1,51 @@
+.about-section {
+	padding:127px 0 233px;
+}
+.about-us-body {
+	margin-top: 138px;
+	position:relative;
+}
+.about-us-description {
+	line-height:2.25em;
+	font-size:1em;
+	color:$dark-gray;
+}
+.about-us-learn-more {
+	position:absolute;
+	bottom:0;
+	@include btn-purple(20px, 4px);
+}
+.about-us-body img{
+	width:100%;
+	height:auto;
+}
+@media (min-width:320px) and (max-width:767px) {
+	.about-section {
+		padding:80px 2em;
+	}
+	.about-us-background {
+		background-size: 100% 100%;
+	}
+	.about-us-description {
+		margin-top:30px;
+		text-align:center;
+		min-height: 0px;
+	}
+	.about-us-learn-more {
+		position:relative;
+		margin-top:20px;
+	}
+	.about-us-body {
+		margin-top:50px;
+	}
+}
+@media (min-width:768px) {
+	.about-us-body div[class*="col-"] {
+		float: none; 
+		display: table-cell;
+		vertical-align: top;
+	}
+	.about-us-learn-more {
+		display: table;
+	}
+}

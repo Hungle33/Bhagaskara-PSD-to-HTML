@@ -1,0 +1,30 @@
+html, body {
+	height:100%;
+	font-size:16px;
+}
+body {
+	position:relative;
+}
+@include min-breakpoint(320) { 
+	html, body {
+		font-size:82%;
+	}
+}
+@include min-breakpoint(768) { 
+	html, body {
+		font-size:88%;
+	}
+}
+@include min-breakpoint(992) { 
+	html, body {
+		font-size:94%;
+	}
+}
+@include min-breakpoint(1170) { 
+	html, body {
+		font-size:100%;
+	}
+}
+.os-animation{
+  opacity: 0;
+}
