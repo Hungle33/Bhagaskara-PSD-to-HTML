@@ -245,36 +245,44 @@ Copyright (c) 2015 Daniel Eden
 }
 
 @-webkit-keyframes shake {
-  from, to {
+  from{
+    opacity: 0;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-
   10%, 30%, 50%, 70%, 90% {
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0);
   }
-
   20%, 40%, 60%, 80% {
     -webkit-transform: translate3d(10px, 0, 0);
     transform: translate3d(10px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes shake {
-  from, to {
+  from{
+    opacity: 0;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-
   10%, 30%, 50%, 70%, 90% {
     -webkit-transform: translate3d(-10px, 0, 0);
     transform: translate3d(-10px, 0, 0);
   }
-
   20%, 40%, 60%, 80% {
     -webkit-transform: translate3d(10px, 0, 0);
     transform: translate3d(10px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -746,7 +754,6 @@ Copyright (c) 2015 Daniel Eden
   }
 
   60% {
-    opacity: 1;
     -webkit-transform: translate3d(25px, 0, 0);
     transform: translate3d(25px, 0, 0);
   }
@@ -762,6 +769,7 @@ Copyright (c) 2015 Daniel Eden
   }
 
   to {
+    opacity: 1;
     -webkit-transform: none;
     transform: none;
   }
@@ -780,7 +788,6 @@ Copyright (c) 2015 Daniel Eden
   }
 
   60% {
-    opacity: 1;
     -webkit-transform: translate3d(25px, 0, 0);
     transform: translate3d(25px, 0, 0);
   }
@@ -796,6 +803,7 @@ Copyright (c) 2015 Daniel Eden
   }
 
   to {
+    opacity: 1;
     -webkit-transform: none;
     transform: none;
   }
@@ -829,7 +837,6 @@ Copyright (c) 2015 Daniel Eden
   }
 
   90% {
-    opacity: .5;
     -webkit-transform: translate3d(-5px, 0, 0);
     transform: translate3d(-5px, 0, 0);
   }
@@ -864,7 +871,6 @@ Copyright (c) 2015 Daniel Eden
   }
 
   90% {
-    opacity: .5;
     -webkit-transform: translate3d(-5px, 0, 0);
     transform: translate3d(-5px, 0, 0);
   }
@@ -913,7 +919,6 @@ Copyright (c) 2015 Daniel Eden
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-    opacity: .5;
 }
 
 @keyframes bounceInUp {
@@ -929,7 +934,6 @@ Copyright (c) 2015 Daniel Eden
   }
 
   60% {
-    opacity: 1;
     -webkit-transform: translate3d(0, -20px, 0);
     transform: translate3d(0, -20px, 0);
   }
@@ -945,6 +949,7 @@ Copyright (c) 2015 Daniel Eden
   }
 
   to {
+    opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }

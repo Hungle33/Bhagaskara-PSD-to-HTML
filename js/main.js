@@ -43,14 +43,14 @@ $(document).on("ready", function(){
 	$(".arrow").on("click", function(){
 		if($(this).hasClass("next")) {
 			if(csCurrPos < csLastPos) {
-				$(".cs-slider").animate({'margin-left':'-=' + csMarginSize}, 200);
+				$(".cs-slider").animate({'margin-left':'-=' + csMarginSize}, 500, 'easeOutCirc');
 				csCurrPos++;
 			}
 		}
 
 		if($(this).hasClass("prev")) {
 			if(csCurrPos > 0) {
-				$(".cs-slider").animate({'margin-left':'+=' + csMarginSize}, 200);
+				$(".cs-slider").animate({'margin-left':'+=' + csMarginSize}, 500, 'easeOutCirc');
 				csCurrPos--;
 			}
 		}
@@ -66,11 +66,27 @@ $(document).on("ready", function(){
 		}
 	});
 
+	// Isotope portfolio grid
+	var $grid = $('.grid').isotope({
+		itemSelector: '.element-item',
+		layoutMode: 'fitRows'
+	});
+	var $container = $(".port-sub-section");
+	// filter items on button click
+	$('.filter-button-group').on( 'click', 'button', function() {
+		var filterValue = $(this).attr('data-filter');
+		$container.isotope({ filter: filterValue });
+	});
+
+	$(".filter-button-group button").on("click", function(){
+		$(".filter-button-group button").removeClass("active");
+		$(this).addClass("active");
+	});
 	// Placeholder Text for browsers without support
 	$('input, textarea').placeholder();
 
 	// Local Scrolling
-	$.localScroll();
+	$.localScroll({easing: 'easeInOutQuart'});
 
 	// On viewport animations
 	var animatedNodes = document.querySelectorAll(".os-animation");
@@ -96,7 +112,7 @@ $(document).on("ready", function(){
 				$ele.addClass("animated").addClass(animation);
 			},{
 				triggerOnce: true,
-				offset: '70%' // Appear once 90% from the top
+				offset: '90%' // Appear once 90% from the top
 			});
 		});
 	}
