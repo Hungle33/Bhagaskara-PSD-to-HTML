@@ -40,6 +40,10 @@
 		stroke: $f;
 		stroke-width: 5;
 		stroke-miterlimit: 10;
+		-webkit-transition: fill .4s;
+		transition: fill .4s; 
+		-moz-transition: fill .4s; 
+		-o-transition: fill .4s; 
 	}
 	div {
 		width:100%;
@@ -63,6 +67,7 @@
 		stroke: $purple;
 	}
 }
+
 .scroll-down-btn {
 	cursor: pointer;
 	&:hover .st0{
