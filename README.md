@@ -1,5 +1,7 @@
 # Bhagaskara-PSD-to-HTML
 
+Disclaimer: These designs not belong to me. They are templates from the web that I used in order to demonstrate my skills.
+
 A more accurate assessment of my current HTML and CSS skills.
 
 This is a more current assessment of my skills. I used evernote SASS to structure my CSS. 
